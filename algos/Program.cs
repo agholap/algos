@@ -7,7 +7,9 @@ namespace algos
         //added comments
         static void Main(string[] args)
         {
-            MaxDigitSum.getMaxDigitSumBrute(100);
+            // MaxDigitSum.getMaxDigitSumBrute(100);
+            PermutationOfString.permuteString();
+            BalancedParenthesis.Call();
         }
     }
 }
