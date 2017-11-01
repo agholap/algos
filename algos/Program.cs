@@ -7,7 +7,7 @@ namespace algos
         //added comments
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MaxDigitSum.getMaxDigitSumBrute(100);
         }
     }
 }
