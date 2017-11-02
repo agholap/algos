@@ -9,7 +9,7 @@ namespace algos
         {
             // MaxDigitSum.getMaxDigitSumBrute(100);
             PermutationOfString.permuteString();
-            BalancedParenthesis.Call();
+            //BalancedParenthesis.Call();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace algos
     {
         public static void permuteString()
         {
-            string per = "abc";
+            string per = "abcde";
             List<string> lstPer = new List<string>();
             var permutation = permuteString(per);
             for (int i = 0; i < permutation.Count; i++)
@@ -37,6 +37,8 @@ namespace algos
         //append addional letter to index places of new string
         public static List<string> permuteString(string permute)
         {
+            Console.Write(InsertTabs(permute.Length));
+            Console.WriteLine("permuteString(" + permute+")");
             var ls = new List<string>();
             if (permute == "")//base case
             {
@@ -50,6 +52,8 @@ namespace algos
                 var words = permuteString(remender); // 
                 foreach (var w in words)
                 {
+                    Console.Write(InsertTabs(permute.Length));
+                    Console.WriteLine("permuteString Output = " + w + "");
                     for (int i = 0; i <= w.Length; i++)
                     {
                         ls.Add(InsertChar(w, i, firstChar));
@@ -57,6 +61,15 @@ namespace algos
                 }
             }
             return ls;
+        }
+        static string InsertTabs(int len)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < len; i++)
+            {
+                 sb.Append("\"---\"");
+            }
+            return sb.ToString();
         }
        static string InsertChar(string str, int index, string prefix)
         {
